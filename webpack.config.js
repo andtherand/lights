@@ -5,7 +5,6 @@ const compression = require('compression-webpack-plugin');
 const html = require('html-webpack-plugin');
 const copy = require('copy-webpack-plugin');
 const extract = require('extract-text-webpack-plugin');
-// const portfinder = require('portfinder');
 
 module.exports = function (options, webpackOptions) {
   options = options || {};
@@ -44,10 +43,12 @@ module.exports = function (options, webpackOptions) {
         historyApiFallback: true,
         host: '0.0.0.0',
         port: 8080,
-        // open: true,
         hot: false,
         inline: true,
-        stats: { colors: true, chunks: false },
+        stats: {
+          colors: true,
+          chunks: false
+        },
         watchOptions: {
           aggregateTimeout: 300,
           poll: 1000
@@ -120,19 +121,13 @@ function root(path) {
 }
 
 function getEntry(options) {
-  if (options.client) {
-    if (options.aot) {
-      return { app: root('src/main.browser.aot.ts') };
-    } else {
-      return { app: root('src/main.browser.ts') };
-    }
-  } else if (options.server) {
-    if (options.aot) {
-      return { app: root('src/main.server.aot.ts') };
-    } else {
-      return { app: root('src/main.server.ts') };
-    }
+  let rootFile = options.aot ? 'src/main.browser.aot.ts' : 'src/main.browser.ts'
+
+  if (options.server) {
+    rootFile = options.aot ? 'src/main.server.aot.ts' : 'src/main.server.ts'
   }
+
+  return { app: root(rootFile) };
 }
 
 function getProductionPlugins() {

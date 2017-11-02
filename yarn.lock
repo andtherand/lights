@@ -78,6 +78,10 @@
   dependencies:
     tsickle "^0.21.0"
 
+"@ng-dynamic-forms/core@^5.0.0":
+  version "5.0.0"
+  resolved "https://registry.yarnpkg.com/@ng-dynamic-forms/core/-/core-5.0.0.tgz#46c12bc2bb6fb72a3d97b0af843c03f3d9121dcb"
+
 "@ngtools/webpack@^1.5.0":
   version "1.7.4"
   resolved "https://registry.yarnpkg.com/@ngtools/webpack/-/webpack-1.7.4.tgz#5015c47ebd339045dd89a1bef0497f4524d2c8ed"
