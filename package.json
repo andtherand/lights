@@ -1,6 +1,6 @@
 {
-  "name": "@bleenco/angular-webpack-seed",
-  "version": "0.5.0",
+  "name": "@mychiara/lights",
+  "version": "0.1.0",
   "scripts": {
     "start": "webpack-dev-server --env.client --env.serve --progress",
     "start:aot": "webpack-dev-server --env.client --env.serve --env.aot --progress",
@@ -27,17 +27,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/bleenco/angular-webpack-seed.git"
+    "url": "git+https://github.com/mychiara/lights.git"
   },
   "authors": [
-    "Jan Kuri <jkuri88@gmail.com>",
-    "Irman Abdic <irman.abdic@gmail.com>"
+    "Andy Ruck"
   ],
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/bleenco/angular-webpack-seed/issues"
-  },
-  "homepage": "https://github.com/bleenco/angular-webpack-seed#readme",
+  "homepage": "https://github.com/mychiara/lights#readme",
   "dependencies": {
     "@angular/animations": "^4.2.5",
     "@angular/common": "^4.2.5",
