@@ -1,0 +1,16 @@
+version: '3'
+services: 
+  nodejs:
+    build: .
+    container_name: 'lights'
+    ports:  
+      - '8080:8080'
+    environment:
+      - NODE_ENV=dev
+    entrypoint:
+      - npm
+      - run
+      - dev 
+    volumes:
+      - .:/app
+      - /app/node_modules
